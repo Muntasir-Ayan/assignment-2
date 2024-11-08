@@ -43,15 +43,15 @@ The **Hotel Booking Website** project is designed to help users find and book ho
 
 ### Project Structure
 
-hotel-booking-website
-├── index.html          # Home page of the website
-├── assest
-│   └── images          # Folder containing image assets
-├── css                 # containing css file 
-│   └── style.css       # for main code
-    └── popUp.css       # for pop up window
-├── js
-│   └── script.js      # cripting file
+hotel-booking-website <br> 
+├── index.html         # Home page of the website <br> 
+├── assest          <br> 
+│   └── images          # Folder containing image assets<br> 
+├── css                 # containing css file <br> 
+│   └── style.css       # for main code <br> 
+    └── popUp.css       # for pop up window <br> 
+├── js <br> 
+│   └── script.js      # cripting file <br> 
 
 ### Project Dependencies
 HTML5, CSS3, and JavaScript
