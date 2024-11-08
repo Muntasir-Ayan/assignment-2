@@ -1,3 +1,6 @@
+
+// menu toggling
+
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
@@ -116,7 +119,9 @@ function closePopup() {
 
     if (adultCount !== previousAdultCount || childCount !== previousChildCount) {
         const totalCount = adultCount + childCount;
-        document.getElementById('sidebar-traveler-count').textContent = `👤 ${totalCount} traveler${totalCount > 1 ? 's' : ''}`;
+        const isWithPet = document.getElementById('sidebar-pets').checked;
+        document.getElementById('sidebar-traveler-count').textContent = 
+            `👤 ${totalCount} traveler${totalCount > 1 ? 's' : ''}${isWithPet ? ' (with pet)' : ''}`;
     }
 }
 
@@ -138,8 +143,10 @@ function updateCount(type, delta) {
     }
 }
 
+// Initialize visibility of decrement buttons
 document.getElementById('sidebar-adult-decrement').style.visibility = 'hidden';
 document.getElementById('sidebar-child-decrement').style.visibility = 'hidden';
+
 
 // --- Image Pop-Up ---
 document.addEventListener('DOMContentLoaded', function() {
