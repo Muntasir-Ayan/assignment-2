@@ -1772,7 +1772,7 @@ button {
 
 /* pop image start  */
 
-.image-viewer {
+/* .image-viewer {
   display: none;
   position: fixed;
   z-index: 1;
@@ -1838,6 +1838,6 @@ button {
 
 .image-info .count {
   margin-left: 10px;
-}
+} */
 
 /* pop up image end */
