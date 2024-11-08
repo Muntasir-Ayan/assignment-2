@@ -99,19 +99,18 @@
   .upper_body_image {
     margin-top: 20px;
   }
-
+  
   .gallery-container {
-
     margin: 0 auto;
   }
-
+  
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 8px;
     margin-bottom: 20px;
   }
-
+  
   .gallery-item {
     position: relative;
     width: 100%;
@@ -120,7 +119,7 @@
     overflow: hidden;
     border-radius: 12px;
   }
-
+  
   .gallery-item img {
     position: absolute;
     width: 100%;
@@ -128,16 +127,16 @@
     object-fit: cover;
     transition: transform 0.3s ease;
   }
-
+  
   .gallery-item:hover img {
     transform: scale(1.05);
   }
-
+  
   .gallery-item.main-image {
     grid-column: span 2;
     grid-row: span 2;
   }
-
+  
   .photo-count {
     position: absolute;
     bottom: 16px;
@@ -147,6 +146,7 @@
     padding: 6px 12px;
     border-radius: 4px;
     font-size: 14px;
+    cursor: pointer;
   }
 
   /* body images end */
@@ -1772,10 +1772,10 @@ button {
 
 /* pop image start  */
 
-/* .image-viewer {
+.image-viewer {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 1000;
   left: 0;
   top: 0;
   width: 100%;
@@ -1797,13 +1797,15 @@ button {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-.close-btn:hover,
-.close-btn:focus {
+.close-btn-image:hover,
+.close-btn-image:focus {
   color: black;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .image-container {
@@ -1838,6 +1840,6 @@ button {
 
 .image-info .count {
   margin-left: 10px;
-} */
+}
 
 /* pop up image end */
