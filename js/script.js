@@ -1,4 +1,3 @@
-
 // heart button red start
 // Get references to the elements
 const saveButtonHeart = document.querySelector('.save-button-heart');
@@ -45,7 +44,7 @@ function closePopupShare() {
 
 // Function to copy link to clipboard
 function copyLink() {
-    const link = "https://example.com/share-link";
+    const link = "http://127.0.0.1:5501/assignment-2/";
     navigator.clipboard.writeText(link).then(() => {
         alert("Link copied to clipboard!");
     }).catch((error) => {
