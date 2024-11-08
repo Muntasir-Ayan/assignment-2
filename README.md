@@ -1,4 +1,4 @@
-# assignment-2
+# assignment-2 On JavaScript 
 W3 engineers Assignment-2
 
 Live Link: 
@@ -25,6 +25,11 @@ The **Hotel Booking Website** project is designed to help users find and book ho
 ### Features
 
 - **Responsive Design**: Adaptable to all screen sizes including mobile, tablet, and desktop.
+- **Region Selection**: User can select region, based on region currency will changed, use can aslo change currency menually.
+- **Sharing Option**: user can share through socail media(not implemented), Just link copy implemented.
+- **Saving Option**: User can save, using save button clicking.
+- **Image View**: User can see more images.
+- **Travelers Count**: User can set travelers numbers and can travel with pets or without pet also.
 - **Room Listings**: Showcase different room types with images, prices, and descriptions.
 - **Amenities Section**: Lists the hotel’s amenities like Kitchen, Dryer, Parking, washer and outdoor  facilities.
 - **Booking Form**: Allows users to submit booking inquiries with their contact details.
@@ -42,10 +47,14 @@ hotel-booking-website
 ├── index.html          # Home page of the website
 ├── assest
 │   └── images          # Folder containing image assets
-├── style.css           # containing css file 
+├── css                 # containing css file 
+│   └── style.css       # for main code
+    └── popUp.css       # for pop up window
+├── js
+│   └── script.js      # cripting file
 
 ### Project Dependencies
-HTML5 and CSS3
+HTML5, CSS3, and JavaScript
 
 ### Overview
 
