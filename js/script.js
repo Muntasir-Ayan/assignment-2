@@ -53,6 +53,7 @@ function copyLink() {
 const regionLink = document.getElementById('regionLink');
 const popup = document.getElementById('popup');
 const overlay = document.getElementById('overlay');
+// const closeButton = document.getElementById('closeButton');
 const regionSelect = document.getElementById('region');
 const currencySelect = document.getElementById('currency');
 const saveButton = document.getElementById('saveButton');
@@ -67,11 +68,9 @@ overlay.addEventListener('click', function () {
     popup.classList.remove('show');
 });
 
-saveButton.addEventListener('click', function () {
+closeButton.addEventListener('click', function () {
     overlay.classList.remove('show');
     popup.classList.remove('show');
-    regionLink.textContent = `🌐 ${regionSelect.value}`;
-    alert('Settings saved!');
 });
 
 regionSelect.addEventListener('change', function () {
@@ -91,6 +90,13 @@ regionSelect.addEventListener('change', function () {
             currencySelect.value = '';
             currencySelect.disabled = true;
     }
+});
+
+saveButton.addEventListener('click', function () {
+    overlay.classList.remove('show');
+    popup.classList.remove('show');
+    regionLink.textContent = `🌐 ${regionSelect.value}`;
+    alert('Settings saved!');
 });
 
 // --- Side-Bar Pop-Up ---
@@ -185,3 +191,8 @@ document.addEventListener('DOMContentLoaded', function() {
         nextButton.disabled = index === images.length - 1;
     }
 });
+
+
+
+
+
