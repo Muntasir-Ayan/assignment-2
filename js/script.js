@@ -117,12 +117,11 @@ function openPopup() {
 function closePopup() {
     document.getElementById('sidebar-popup').style.display = 'none';
 
-    if (adultCount !== previousAdultCount || childCount !== previousChildCount) {
-        const totalCount = adultCount + childCount;
-        const isWithPet = document.getElementById('sidebar-pets').checked;
-        document.getElementById('sidebar-traveler-count').textContent = 
-            `👤 ${totalCount} traveler${totalCount > 1 ? 's' : ''}${isWithPet ? ' (with pet)' : ''}`;
-    }
+    // Check current checkbox state whenever "Done" is clicked
+    const isWithPet = document.getElementById('sidebar-pets').checked;
+    const totalCount = adultCount + childCount;
+    document.getElementById('sidebar-traveler-count').textContent = 
+        `👤 ${totalCount} traveler${totalCount > 1 ? 's' : ''}${isWithPet ? ' (with pet)' : ''}`;
 }
 
 function updateCount(type, delta) {
