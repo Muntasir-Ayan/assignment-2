@@ -1764,9 +1764,20 @@
   margin: 0;
 }
 
+.sidebar-popup .Done-button{
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 6rem;
+  background-color: #abcff3;
+}
+
 button {
+  align-items: center;
   padding: 5px 10px;
   cursor: pointer;
+}
+.text-color-popUp{
+  color: #686b75;
 }
 
 /* Side-bar topUp End */

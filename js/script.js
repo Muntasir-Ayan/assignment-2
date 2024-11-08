@@ -104,19 +104,29 @@ saveButton.addEventListener('click', function () {
 
 // side-bar PopUp
 // Initial count values
+// Initial count values
 let adultCount = 0;
 let childCount = 0;
+let previousAdultCount = 0;
+let previousChildCount = 0;
 
 // Function to open popup
 function openPopup() {
+    // Store previous counts to detect changes when closing
+    previousAdultCount = adultCount;
+    previousChildCount = childCount;
     document.getElementById('sidebar-popup').style.display = 'block';
 }
 
-// Function to close popup and update traveler count
+// Function to close popup and update traveler count only if changes were made
 function closePopup() {
     document.getElementById('sidebar-popup').style.display = 'none';
-    const totalCount = adultCount + childCount;
-    document.getElementById('sidebar-traveler-count').textContent = `👤 ${totalCount} traveler${totalCount > 1 ? 's' : ''}`;
+
+    // Check if there were any changes in counts
+    if (adultCount !== previousAdultCount || childCount !== previousChildCount) {
+        const totalCount = adultCount + childCount;
+        document.getElementById('sidebar-traveler-count').textContent = `👤 ${totalCount} traveler${totalCount > 1 ? 's' : ''}`;
+    }
 }
 
 // Function to update count
@@ -125,7 +135,14 @@ function updateCount(type, delta) {
         adultCount = Math.max(0, adultCount + delta);
         document.getElementById('sidebar-adult-count').textContent = adultCount;
         document.getElementById('sidebar-adult-decrement').style.visibility = adultCount > 0 ? 'visible' : 'hidden';
-    } else if (type === 'child') {
+        
+        // Reset child count if adult count becomes 0
+        if (adultCount === 0) {
+            childCount = 0;
+            document.getElementById('sidebar-child-count').textContent = childCount;
+            document.getElementById('sidebar-child-decrement').style.visibility = 'hidden';
+        }
+    } else if (type === 'child' && adultCount > 0) { // Allow child count changes only if adult count > 0
         childCount = Math.max(0, childCount + delta);
         document.getElementById('sidebar-child-count').textContent = childCount;
         document.getElementById('sidebar-child-decrement').style.visibility = childCount > 0 ? 'visible' : 'hidden';
