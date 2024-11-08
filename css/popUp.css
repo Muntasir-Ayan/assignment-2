@@ -85,7 +85,49 @@
     background-color: #5fc4e2;
   }
   
+  @media screen and (max-width: 480px) {
+    .share-popup {
+      padding: 15px;
+      width: 95%;
+    }
+    
+    .popup-icons {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10px;
+    }
+    
+    .icon {
+      height: 45px;
+      font-size: 14px;
+    }
+    
+    .popup-content {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .popup-content img {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
   
+  @media screen and (max-width: 320px) {
+    .popup-icons {
+      grid-template-columns: 1fr;
+    }
+    
+    .share-popup {
+      padding: 10px;
+    }
+    
+    .icon {
+      height: 40px;
+      font-size: 13px;
+    }
+  }
+  
+
   /* share pop up end */
   
   /* pop up region start*/
@@ -197,6 +239,59 @@
     color: #686b75;
   }
   
+
+  @media screen and (max-width: 480px) {
+    .sidebar-popup {
+      width: 95%;
+      padding: 15px;
+    }
+  
+    .sidebar-popup h2 {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  
+    .sidebar-section {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  
+    .sidebar-section p {
+      width: 100%;
+      text-align: left;
+    }
+  
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+    }
+  
+    .sidebar-popup .Done-button {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+  
+  @media screen and (max-width: 320px) {
+    .sidebar-popup {
+      padding: 12px;
+    }
+  
+    .sidebar-popup h2 {
+      font-size: 1.2rem;
+    }
+  
+    .sidebar-section {
+      gap: 6px;
+    }
+  
+    button {
+      padding: 8px;
+      font-size: 0.9rem;
+    }
+  }
   /* Side-bar topUp End */
   
   
@@ -283,81 +378,3 @@
   
   /* pop up image end */
 
-
-  /* Responsive adjustments */
-@media (max-width: 600px) {
-    /* Overlay background */
-    .share-overlay,
-    .overlay {
-      width: 100%;
-      height: 100%;
-    }
-  
-    /* Popup containers */
-    .share-popup,
-    .popup,
-    .sidebar-popup,
-    .image-viewer-content {
-      width: 90%; /* Reduce width on smaller screens */
-      max-width: 90%;
-      padding: 15px;
-    }
-  
-    /* Header section with close button */
-    .popup-header,
-    .popup-content {
-      flex-direction: column; /* Stack items vertically */
-      align-items: flex-start; /* Align items to the start */
-    }
-  
-    .popup-content img {
-      width: 50px; /* Smaller image for mobile */
-      height: 50px;
-      margin-right: 0;
-    }
-  
-    /* Social media icons */
-    .popup-icons {
-      grid-template-columns: repeat(2, 1fr); /* Adjust icon layout */
-      gap: 8px;
-    }
-  
-    /* Content section */
-    .popup-content,
-    .popup-header h2,
-    .sidebar-section p {
-      font-size: 14px; /* Smaller text on mobile */
-    }
-  
-    /* Adjust button size */
-    .icon, .Done-button, .close-button, .save-btn {
-      font-size: 14px;
-      padding: 8px;
-    }
-  
-    /* Adjust image viewer */
-    .image-viewer-content {
-      padding: 20px;
-    }
-  
-    .image {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    .navigation-buttons button {
-      font-size: 14px;
-    }
-  
-    /* Sidebar pop-up adjustments */
-    .sidebar-section {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .sidebar-section button {
-      width: 100%;
-      margin-top: 5px;
-    }
-  }
-  
