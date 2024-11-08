@@ -1,24 +1,29 @@
 
 // heart button red start
-const heartButton = document.querySelector('.fa-regular.fa-heart');
+// Get references to the elements
+const saveButtonHeart = document.querySelector('.save-button-heart');
+const saveOnly = document.querySelector('.save-only');
+const saved = document.querySelector('.saved');
 
 // Check if the saved state is stored in localStorage on initial load
 let isSaved = localStorage.getItem('isSaved') === 'true';
 updateHeartButtonState();
 
-heartButton.addEventListener('click', () => {
+// Function to toggle save state
+function toggleSaveState() {
     isSaved = !isSaved;
     updateHeartButtonState();
     localStorage.setItem('isSaved', isSaved);
-});
+}
 
+// Function to update visibility of save-only and saved elements based on the save state
 function updateHeartButtonState() {
     if (isSaved) {
-        heartButton.style.color = 'red';
-        heartButton.style.i.backgroundColor = 'red'
-    }
-    else {
-        heartButton.style.color = '#00BFFF';
+        saveOnly.style.display = 'none';
+        saved.style.display = 'block';
+    } else {
+        saveOnly.style.display = 'block';
+        saved.style.display = 'none';
     }
 }
 

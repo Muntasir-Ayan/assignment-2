@@ -69,9 +69,19 @@
             <a href="#">&#8592; See all properties</a>
           </div>
           <div class="upper_button">
-            <button class="share-button" onclick="openPopupShare()"> <i class="fa-solid fa-arrow-up-from-bracket" style="color: #00BFFF;"></i> Share</button>
-            <button class="save-button"> <i class="fa-regular fa-heart" style="color: red;"></i> Save</button>
-          </div>
+            <button class="share-button" onclick="openPopupShare()"> 
+                <i class="fa-solid fa-arrow-up-from-bracket" style="color: #00BFFF;"></i> Share
+            </button>
+            <button class="save-button-heart" onclick="toggleSaveState()">
+              <div class="save-only">
+                  <i class="fa-regular fa-heart" style="color: #00BFFF;"></i> Save
+              </div>
+              <div class="saved" style="display: none;">
+                  <i class="fa-regular fa-heart" style="color: #ce2759;"></i> Saved
+              </div>
+          </button>
+          
+        </div>
 
           <!-- share pop up start -->
           <!-- Overlay background -->
