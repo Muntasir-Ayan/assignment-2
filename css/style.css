@@ -1641,14 +1641,15 @@
 
 /* Social media icons */
 .popup-icons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 10px; /* Space between items */
+    padding: 20px;
 }
 
 .icon {
-  width: 80px;
-  height: 30px;
+  width: 100px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1656,14 +1657,15 @@
   cursor: pointer;
   color: #333;
   font-weight: bold;
+  background-color: #6bd8c9;
+  border-radius: 20px;
 }
 
 /* Style for Copy Link button */
 .copy-link {
   border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #f5f5f5;
+  padding: 10px;
+  background-color: #5fc4e2;
 }
 
 
@@ -1780,21 +1782,29 @@ button {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  overflow: hidden; /* Prevent scrolling */
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 .image-viewer-content {
   background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
   border: 1px solid #888;
   width: 80%;
+  max-width: 800px; /* Limit maximum width */
+  max-height: 90vh; /* Limit maximum height */
+  box-sizing: border-box;
 }
 
 .close-btn-image {
-  color: #aaa;
-  float: right;
+  color: #635b5b;
+  position: absolute;
+  top: 5px;
+  right: 15px;
   font-size: 28px;
   font-weight: bold;
   border: none;
@@ -1804,12 +1814,12 @@ button {
 
 .close-btn-image:hover,
 .close-btn-image:focus {
-  color: black;
+  color: rgb(241, 10, 10);
   text-decoration: none;
 }
 
 .image-container {
-  max-height: 60vh;
+  max-height: calc(90vh - 60px); /* Adjust for padding and close button */
   overflow: hidden;
 }
 
@@ -1841,5 +1851,6 @@ button {
 .image-info .count {
   margin-left: 10px;
 }
+
 
 /* pop up image end */

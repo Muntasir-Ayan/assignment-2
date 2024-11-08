@@ -1,5 +1,4 @@
 
-
 // heart button red start
 const heartButton = document.querySelector('.fa-regular.fa-heart');
 
@@ -16,6 +15,7 @@ heartButton.addEventListener('click', () => {
 function updateHeartButtonState() {
     if (isSaved) {
         heartButton.style.color = 'red';
+        heartButton.style.i.backgroundColor = 'red'
     }
     else {
         heartButton.style.color = '#00BFFF';
