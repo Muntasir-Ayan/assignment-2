@@ -1,3 +1,10 @@
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
 // --- Heart Button Save State ---
 const saveButtonHeart = document.querySelector('.save-button-heart');
 const saveOnly = document.querySelector('.save-only');

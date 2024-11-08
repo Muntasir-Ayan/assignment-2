@@ -20,7 +20,13 @@
     font-family: Arial, sans-serif;
   }
 
-  /* Styling the nav links */
+  .nav-links {
+    text-decoration: none;
+color: #333;
+margin-left: 20px;
+font-weight: 500;
+  }
+
   .nav-links a {
     text-decoration: none;
     color: #333;
@@ -28,24 +34,60 @@
     font-weight: 500;
   }
 
-  /* Media query for mobile devices */
+  .user-icon {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+  }
+
   @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
     .nav-links {
       display: none;
-      /* Hide navigation links on mobile */
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #fff;
+      padding: 10px 20px;
+      position: absolute;
+      top: 60px;
+      right: 0; /* Position the nav links to the right on mobile */
+      left: auto; /* Remove left alignment */
+      z-index: 1;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-links a {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+
+    .menu-toggle {
+      display: block;
     }
 
     .user-icon {
-      display: block;
-      /* Show only user icon on mobile */
+      display: none;
     }
   }
 
-  /* Optional: to hide the user icon on larger screens */
   @media (min-width: 769px) {
-    .user-icon {
-      display: none;
-      /* Hide user icon on desktop */
+    .header {
+      justify-content: flex-end;
     }
   }
 

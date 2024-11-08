@@ -189,6 +189,31 @@
   .save-btn:hover {
     background-color: #005bb5;
   }
+
+
+@media (max-width: 767px) {
+    .popup {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .popup-header h2 {
+      font-size: 1.2rem;
+    }
+  
+    .close-btn {
+      font-size: 18px;
+    }
+  
+    .warning-text {
+      font-size: 11px;
+    }
+  
+    .save-btn {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  }
   
   /* pop up region end */
   
