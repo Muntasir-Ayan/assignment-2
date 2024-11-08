@@ -1,7 +1,7 @@
 # assignment-2 On JavaScript 
 W3 engineers Assignment-2
 
-Live Link: 
+Live Link: https://muntasir-ayan.github.io/assignment-2/
 # Hotel Booking Website
 
 A responsive website for hotel booking services. This project showcases a modern, user-friendly interface for a hotel booking system, allowing users to explore room options, view amenities, and make reservations online.
